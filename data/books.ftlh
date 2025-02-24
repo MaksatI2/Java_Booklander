@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <title>Список книг</title>
     <style>
-        table { width: 70%; border-collapse: collapse; }
-        th, td { padding: 10px; border: 1px solid black; text-align: left; }
-        th { background: #f4f4f4; }
-        a { text-decoration: none; color: blue; }
+        body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+        .book-container { display: flex; flex-direction: column; gap: 15px; max-width: 1000px; margin: auto; }
+        .book-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; }
+        .book-image img { width: 180px; height: 220px; border-radius: 5px; }
+        .book-info { flex-grow: 1; }
+        .book-title { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+        .book-author { color: #EFB060; font-size: 14px; margin-bottom: 10px; }
+        .book-status { font-size: 14px; color: green; margin-bottom: 10px; }
+        .book-description { font-size: 14px; color: #555; }
+        .book-link { display: block; margin-top: 10px; color: blue; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>Список книг</h1>
-    <table>
-        <tr>
-            <th>IMG</th>
-            <th>ID</th>
-            <th>Название</th>
-            <th>Статус</th>
-            <th>Детали</th>
-        </tr>
-        <#list books as book>
-            <tr>
-                <td><img src="${book.image}" alt="Обложка ${book.title}" width="140" height="140">
-                <td>${book.id}</td>
-                <td>${book.title}</td>
-                <td>${(book.issued)?string("Выдана", "Доступна")}</td>
-                <td><a href="/book/1">Подробнее</a></td>
-            </tr>
-        </#list>
-    </table>
+<div class="book-container">
+<h1>Список книг</h1>
+    <#list books as book>
+        <div class="book-card">
+            <div class="book-image">
+                <img src="${book.image}" alt="Обложка ${book.title}">
+            </div>
+            <div class="book-info">
+                <div class="book-title">${book.title}</div>
+                <div class="book-author">${book.author}</div>
+                <div class="book-status">${(book.issued)?string("Выдана", "Доступна")}</div>
+                <a href="/book/1" class="book-link">Подробнее</a>
+            </div>
+        </div>
+    </#list>
+</div>
 </body>
 </html>
