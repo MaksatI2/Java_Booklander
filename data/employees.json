@@ -1,0 +1,9 @@
+[
+  {"id": "01", "name": "Аиша", "borrowedBooks": ["1"] },
+  {"id": "02", "name": "Эржан", "borrowedBooks": [] },
+  {"id": "03", "name": "Куба", "borrowedBooks": ["2", "3"]},
+  {"id": "04", "name": "Максат", "borrowedBooks": ["7"]},
+  {"id": "05", "name": "Эмир", "borrowedBooks": []},
+  {"id": "06", "name": "Адис", "borrowedBooks": []},
+  {"id": "07", "name": "Элдана", "borrowedBooks": ["6"]}
+]
