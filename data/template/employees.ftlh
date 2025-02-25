@@ -23,12 +23,10 @@
             flex-direction: column;
             gap: 15px;
         }
-        .employee-image img { width: 100%; height: 180px; object-fit: cover;border-radius: 5px;}
         .employee-info { flex-grow: 1;}
         .employee-name { font-size: 18px; font-weight: bold; margin-bottom: 5px;}
         .employee-id { font-size: 14px;margin-bottom: 10px;}
         .employee-books {font-size: 14px; color: green; margin-bottom: 10px;}
-        .employee-description {font-size: 14px;color: #555;}
         .employee-link {
             display: block;
             margin-top: 10px;
