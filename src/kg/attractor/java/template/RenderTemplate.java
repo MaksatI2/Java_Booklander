@@ -15,7 +15,7 @@ public class RenderTemplate {
 
     static {
         try {
-            Path templatesDirectory = Path.of("data");
+            Path templatesDirectory = Path.of("data/template");
             config.setDirectoryForTemplateLoading(templatesDirectory.toFile());
             config.setDefaultEncoding("UTF-8");
         } catch (IOException e) {
